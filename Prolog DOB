@@ -1,16 +1,10 @@
-% Facts: Students, Teachers, Subjects
-student(toufiq, csa1705).
-student(raj, dsa1111).
-student(jack, cse01).
-student(lisa, phys301).
+% Database of individuals with names and DOBs
+person(john, '1990/05/15').
+person(sandy, '1985/11/30').
+person(michael, '1995/02/10').
+person(emily, '2000/08/22').
 
-teacher(prof_smith, csa1705).
-teacher(prof_jones, dsa1111).
-teacher(prof_doe, phys301).
-
-% Rules: Relationships
-teaches(Teacher, Subject) :-
-    teacher(Teacher, Subject).
-
-enrolled(Student, Subject) :-
-    student(Student, Subject).
+%Queries
+% find the DOB of a person
+dob(Name, DOB):-
+  name(Name, DOB).
